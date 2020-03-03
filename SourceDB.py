@@ -1,7 +1,7 @@
 import pyodbc
 import sys
 import datetime
-
+import UnicornMetadata
 
 #Работа с источником
 class SourceDB:
@@ -29,7 +29,7 @@ class SourceDB:
                  "CROSS JOIN unicorn_metadata.TDS_VERSION tds " \
                  "WHERE src.source_id="+str(source_id)
 
-     src_error = UnicornMetadata.error_message(error_code) Пs
+     src_error = UnicornMetadata.error_message(error_code)
 
      src_qr_result = UnicornMetadata.unicorn_crsr.execute(src_qr).fetchone()
 
